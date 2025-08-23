@@ -14,7 +14,7 @@
 <body>
 
     <h1>Button counter</h1>
-    <p id="count">0</p>
+    <p id="count"></p>
 
     <button id="button">click me</button>
 
@@ -28,6 +28,20 @@
          * Hint: On top of grabbing the "count" and "button" elements by their id, you will need to keep track of some variable
          * representing the current value in your code.
          */
+             let counter = 0;
+
+    // grab DOM elements
+    let countDisplay = document.getElementById('count');
+    let button = document.getElementById('button');
+
+    // initialize display
+    countDisplay.textContent = counter;
+
+    // add click handler
+    button.onclick = function () {
+        counter++; // increase count
+        countDisplay.textContent = counter; // update DOM
+    }
 
         
 
